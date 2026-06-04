@@ -153,7 +153,7 @@ const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" st
         <div class="about-image-column">
           <div class="placeholder-img"></div>
           <div class="founder-info">
-            <h4>Charles-Erick &amp; Jean-François BG</h4>
+            <h4>Tomy Lefebvre</h4>
             <p>{t['about.masters']}</p>
             <div class="logo-placeholder" style="margin-top: 1.5rem; opacity: 0.6; display: flex; align-items: center; gap: 0.5rem;">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 12h3v9h6v-6h4v6h6v-9h3L12 2z" /></svg>
@@ -282,7 +282,7 @@ const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" st
       <div class="stats-grid">
         <div class="stat-card">
           <h4>{t['stats.conversion.title']}</h4>
-          <div class="stat-number" data-target="5">0x</div>
+          <div class="stat-number" data-target="16">0x</div>
           <p>{t['stats.conversion.desc']}</p>
         </div>
         <div class="stat-card">
@@ -352,19 +352,9 @@ const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" st
             {t['qualification.yes.title']}
           </h3>
           <ul class="qualification-list qualification-list--yes">
-            {lang === 'fr' ? (
-              <>
-                <li>Vous êtes une entreprise de service — SaaS, applications, services en ligne ou services locaux</li>
-                <li>Vous désirez faire croître votre entreprise</li>
-                <li>Vous êtes sérieux — vous voulez des résultats, pas seulement de belles pages qui flattent votre ego</li>
-              </>
-            ) : (
-              <>
-                <li>You are a service business — SaaS, apps, online or local services</li>
-                <li>You want to grow your business</li>
-                <li>You are serious — you want results, not just pretty pages that flatter your ego</li>
-              </>
-            )}
+            <li>{t['qualification.yes.1']}</li>
+            <li>{t['qualification.yes.2']}</li>
+            <li>{t['qualification.yes.3']}</li>
           </ul>
         </div>
         <div>
@@ -372,27 +362,14 @@ const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" st
             {t['qualification.no.title']}
           </h3>
           <ul class="qualification-list qualification-list--no">
-            {lang === 'fr' ? (
-              <>
-                <li>Vous ne visez pas à croître</li>
-                <li>Vous voulez simplement un joli site ou une jolie application</li>
-                <li>Vous n'êtes pas prêts à adopter une approche orientée sur les résultats plutôt que sur le ressenti</li>
-              </>
-            ) : (
-              <>
-                <li>You are not aiming to grow</li>
-                <li>You just want a pretty website or app</li>
-                <li>You're not ready to adopt a results-oriented rather than feeling-based approach</li>
-              </>
-            )}
+            <li>{t['qualification.no.1']}</li>
+            <li>{t['qualification.no.2']}</li>
+            <li>{t['qualification.no.3']}</li>
           </ul>
         </div>
       </div>
       <p style="font-size: 1.05rem; opacity: 0.85;">
-        {lang === 'fr'
-          ? <>{`Si vous correspondez au profil recherché, `}<strong>{`c'est le temps de `}<a href={`${BASE_PATH}/${lang}/contact/`} style="color: var(--text-dark); text-decoration: underline; font-weight: 700;">se parler&nbsp;!</a></strong></>
-          : <>{`If you match the profile, `}<strong>{`it's time to `}<a href={`${BASE_PATH}/${lang}/contact/`} style="color: var(--text-dark); text-decoration: underline; font-weight: 700;">talk&nbsp;!</a></strong></>
-        }
+        <>{t['qualification.footer.part1']}<strong>{t['qualification.footer.part2']}<a href={`${BASE_PATH}/${lang}/contact/`} style="color: var(--text-dark); text-decoration: underline; font-weight: 700;">{t['qualification.footer.part3']}</a></strong></>
       </p>
     </div>
   </section>

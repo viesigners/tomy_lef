@@ -1,4 +1,5 @@
 ---
 // src/pages/index.astro – redirect root / → /fr/
-return Astro.redirect('/fr/', 302);
+import { BASE_PATH } from '../config.js';
+return Astro.redirect(`${BASE_PATH}/fr/`, 302);
 ---

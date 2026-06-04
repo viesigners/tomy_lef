@@ -2,15 +2,22 @@
 
 /* Base Variables */
 :root {
-  --bg-color: #070b12; /* Bleu-noir très foncé (Startify Hero/Dark) */
-  --bg-secondary: #0f172a; /* Bleu ardoise très sombre */
-  --bg-card: #1e293b; /* Arrière-plan de carte sombre */
+  --bg-color: #070b12;
+  /* Bleu-noir très foncé (Startify Hero/Dark) */
+  --bg-secondary: #0f172a;
+  /* Bleu ardoise très sombre */
+  --bg-card: #1e293b;
+  /* Arrière-plan de carte sombre */
   --bg-card-hover: #1e293b;
   --text-color: #ffffff;
-  --text-muted: #9f9fa9; /* Gris ardoise muté */
-  --text-dark: #0f172a; /* Texte foncé pour sections claires */
-  --bg-light: #f8fafc; /* Gris clair pour sections alternatives claires */
-  --accent-color: #00C9A7; /* Teal cyan dynamique */
+  --text-muted: #9f9fa9;
+  /* Gris ardoise muté */
+  --text-dark: #0f172a;
+  /* Texte foncé pour sections claires */
+  --bg-light: #f8fafc;
+  /* Gris clair pour sections alternatives claires */
+  --accent-color: #00C9A7;
+  /* Teal cyan dynamique */
   --accent-hover: #00a98c;
   --accent-glow: rgba(0, 201, 167, 0.15);
 
@@ -512,7 +519,7 @@ section {
 }
 
 .card-minimal .card-arrow {
-  margin-top: auto; 
+  margin-top: auto;
   align-self: flex-end;
   width: 44px;
   height: 44px;
@@ -1186,6 +1193,10 @@ body.menu-open .hamburger .line-bottom {
 }
 
 /* Portfolio Section Styles */
+#portfolio {
+  display: none !important;
+}
+
 .portfolio-item {
   border-radius: var(--radius-card);
   overflow: hidden;
