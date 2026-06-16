@@ -1,9 +1,11 @@
 ---
 import { BASE_PATH } from '../config.js';
+import { useTranslations } from '../i18n/utils.js';
 // src/layouts/Layout.astro
 // Props: lang (string), title (string), description (string)
 const { lang = 'fr', title, description } = Astro.props;
 
+const t = useTranslations(lang);
 const altLang = lang === 'fr' ? 'en' : 'fr';
 const altLabel = lang === 'fr' ? 'EN' : 'FR';
 ---
@@ -27,7 +29,7 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
 
   <!-- HEADER -->
   <div id="header-wrapper" class="header-wrapper">
-    <div class="container">
+    <div class="container-fluid px-4 px-md-5">
       <header class="main-header">
         <div class="header-contact" style="position: relative; z-index: 1000;">
           <a href="tel:+15815021115" class="contact-link">
@@ -41,8 +43,8 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
         <div class="header-menu-toggle" style="position: relative; z-index: 1000; display: flex; align-items: center; justify-content: flex-end;">
           <button class="menu-btn" id="menuToggleBtn">
             <div class="menu-text-container">
-              <span class="menu-text menu-text-open">Menu</span>
-              <span class="menu-text menu-text-close">Fermer</span>
+              <span class="menu-text menu-text-open">{t('header.menu')}</span>
+              <span class="menu-text menu-text-close">{t('header.close')}</span>
             </div>
             <svg class="hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line class="line line-top" x1="3" y1="6" x2="21" y2="6"></line>
@@ -57,15 +59,15 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
       <div class="fullscreen-menu" id="fullscreenMenu">
         <nav class="fullscreen-nav">
           <ul>
-            <li><a href={`${BASE_PATH}/${lang}/#about`}>{lang === 'fr' ? 'À propos' : 'About'}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/site-web/`}>{lang === 'fr' ? 'Site web' : 'Website'}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/landing-page/`}>{lang === 'fr' ? 'Landing page' : 'Landing page'}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/ux-ui/`}>{lang === 'fr' ? 'Optimisation UX/UI' : 'UX/UI Optimization'}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/coaching/`}>{lang === 'fr' ? "Coaching d'affaires" : 'Business Coaching'}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/contact/`}>{lang === 'fr' ? 'Contact' : 'Contact'}</a></li>
-            <li style="margin-top: 3rem;">
+            <li><a href={`${BASE_PATH}/${lang}/#about`}>{t('nav.about')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/service_1/`}>{t('nav.service_1')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/service_2/`}>{t('nav.service_2')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/service_3/`}>{t('nav.service_3')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/service_4/`}>{t('nav.service_4')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/contact/`}>{t('nav.contact')}</a></li>
+            <!--<li style="margin-top: 3rem;">
               <a href={`${BASE_PATH}/${altLang}/`} class="lang-btn" style="background:none; border:none; color:var(--text-color); padding:0; cursor:pointer; font-weight:500; font-size:clamp(1.5rem, 3vw, 2rem); font-family:var(--font-heading); text-transform:uppercase; transition:opacity 0.3s; opacity: 0.7; text-decoration: none;">{altLabel}</a>
-            </li>
+            </li>-->
           </ul>
         </nav>
       </div>
@@ -99,12 +101,12 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
         </div>
 
         <div class="footer-nav">
-          <h4>{lang === 'fr' ? 'Services' : 'Services'}</h4>
+          <h4>t('nav.services')</h4>
           <ul>
-            <li><a href={`${BASE_PATH}/${lang}/site-web/`}>{lang === 'fr' ? 'Site web' : 'Website'}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/landing-page/`}>{lang === 'fr' ? 'Landing page' : 'Landing page'}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/ux-ui/`}>{lang === 'fr' ? 'Optimisation UX/UI' : 'UX/UI Optimization'}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/coaching/`}>{lang === 'fr' ? "Coaching d'affaires" : 'Business Coaching'}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/service_1/`}>{t('services.service_1.title')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/service_2/`}>{t('services.service_2.title')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/service_3/`}>{t('services.service_3.title')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/service_4/`}>{t('services.service_4.title')}</a></li>
           </ul>
         </div>
 
@@ -142,6 +144,14 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
       if (fullscreenMenu) {
         fullscreenMenu.addEventListener('scroll', () => {
           fullscreenMenu.classList.toggle('is-scrolled', fullscreenMenu.scrollTop > 20);
+        });
+
+        // Close menu when a link is clicked
+        const menuLinks = fullscreenMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            document.body.classList.remove('menu-open');
+          });
         });
       }
 
