@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { BASE_PATH } from '../../config.js';
+import { translations } from '../../i18n/ui.js';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'fr' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const t = { ...translations['fr'], ...(translations[lang] || {}) };
+
+const title = "Gestion des opérations | V2R Consulting";
+const description = "Évaluation approfondie, réorganisation chirurgicale des rôles (RACI) et alignement des compétences.";
+---
+
+<Layout lang={lang} title={title} description={description}>
+
+  <!-- HERO SECTION -->
+  <section class="service-hero">
+    <div class="container">
+      <span class="service-hero-tag">SERVICE</span>
+      <h1>Gestion des opérations</h1>
+      <p>Passez du mode pompier à une gestion proactive pour maximiser votre rentabilité et l'efficacité de vos équipes.</p>
+    </div>
+  </section>
+
+  <!-- DETAILS SECTION -->
+  <section class="service-details">
+    <div class="container grid-2" style="align-items: center; gap: 4rem;">
+      <div class="service-split-left">
+        <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem; line-height: 1.1; max-width: 600px;">La nouvelle génération de management.</h2>
+        <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; margin-bottom: 1.5rem;">
+          L'inefficacité opérationnelle découle souvent d'un manque de clarté dans les responsabilités. Nous offrons une évaluation approfondie de vos processus actuels.
+        </p>
+        <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; margin-bottom: 3rem;">
+          Grâce à une réorganisation chirurgicale des rôles et un alignement des compétences basé sur la matrice RACI (jusqu'à 1000 points de contrôle), vos gestionnaires arrêteront d'éteindre des feux pour enfin piloter la croissance.
+        </p>
+        <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-light-solid" style="margin-top: 1rem;">
+          DISCUTER D'UN PROJET
+        </a>
+      </div>
+      
+      <div class="service-split-right">
+        <div class="service-details-card">
+          <h3>Ce que ça inclut :</h3>
+          <ul class="qualification-list qualification-list--yes service-details-list">
+            <li>
+              <div>
+                <strong>Évaluation des opérations</strong>
+                <span>Diagnostic terrain approfondi de vos pratiques de gestion quotidiennes.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Réorganisation RACI</strong>
+                <span>Clarification chirurgicale de qui fait quoi, qui décide et qui est imputable.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Alignement RH</strong>
+                <span>Optimisation de la performance de vos ressources humaines selon leurs forces.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>KPIs décisionnels</strong>
+                <span>Mise en place de tableaux de bord pertinents pour des décisions éclairées.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="service-cta">
+    <div class="container">
+      <h2>Augmentation de la performance garantie!</h2>
+      <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-dark">REJOINDRE VIESIGNERS</a>
+    </div>
+  </section>
+
+</Layout>

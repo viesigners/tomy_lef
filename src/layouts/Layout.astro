@@ -60,10 +60,10 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
         <nav class="fullscreen-nav">
           <ul>
             <li><a href={`${BASE_PATH}/${lang}/#about`}>{t('nav.about')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/service_1/`}>{t('nav.service_1')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/service_2/`}>{t('nav.service_2')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/service_3/`}>{t('nav.service_3')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/service_4/`}>{t('nav.service_4')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/industrie-4-0/`}>{t('nav.service_1')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/gestion-des-operations/`}>{t('nav.service_2')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/lean-management/`}>{t('nav.service_3')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/leadership-industriel/`}>{t('nav.service_4')}</a></li>
             <li><a href={`${BASE_PATH}/${lang}/contact/`}>{t('nav.contact')}</a></li>
             <!--<li style="margin-top: 3rem;">
               <a href={`${BASE_PATH}/${altLang}/`} class="lang-btn" style="background:none; border:none; color:var(--text-color); padding:0; cursor:pointer; font-weight:500; font-size:clamp(1.5rem, 3vw, 2rem); font-family:var(--font-heading); text-transform:uppercase; transition:opacity 0.3s; opacity: 0.7; text-decoration: none;">{altLabel}</a>
@@ -84,11 +84,11 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
       <div class="footer-grid">
         <div class="footer-brand">
           <a href={`${BASE_PATH}/${lang}/`} class="logo">V2R Consulting</a>
-          <p class="footer-tagline">{lang === 'fr' ? "La pédale d'accélérateur des entreprises en croissance." : "The accelerator pedal for growing businesses."}</p>
+          <p class="footer-tagline">{t('footer.tagline')}</p>
           <div class="footer-info">
-            <p>Québec, Canada</p>
-            <p>Vancouver, Canada</p>
-            <p><span>{lang === 'fr' ? 'Téléphone : ' : 'Phone: '}</span><a href="tel:+15815021115" style="color: inherit; text-decoration: none;">+1 581-502-1115</a></p>
+            <p>{t('footer.location.1')}</p>
+            <p>{t('footer.location.2')}</p>
+            <p>{t('footer.phone')}</p>
           </div>
           <div class="footer-socials">
             <a href="#" class="social-icon">
@@ -101,26 +101,26 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
         </div>
 
         <div class="footer-nav">
-          <h4>t('nav.services')</h4>
+          <h4>{t('footer.services')}</h4>
           <ul>
-            <li><a href={`${BASE_PATH}/${lang}/service_1/`}>{t('services.service_1.title')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/service_2/`}>{t('services.service_2.title')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/service_3/`}>{t('services.service_3.title')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/service_4/`}>{t('services.service_4.title')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/industrie-4-0/`}>{t('services.service_1.title')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/gestion-des-operations/`}>{t('services.service_2.title')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/lean-management/`}>{t('services.service_3.title')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/leadership-industriel/`}>{t('services.service_4.title')}</a></li>
           </ul>
         </div>
 
         <div class="footer-contact">
-          <h4>Contact</h4>
-          <a href={`${BASE_PATH}/${lang}/contact/`} class="footer-cta">{lang === 'fr' ? 'Parlons-nous!' : "Let's talk!"}</a>
+          <h4>{t('footer.contact')}</h4>
+          <a href={`${BASE_PATH}/${lang}/contact/`} class="footer-cta">{t('footer.contact.call')}</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>Copyright &copy; 2026, Les V2R Consulting. <span>{lang === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'}</span></p>
+        <p>Copyright &copy; 2026, Les V2R Consulting. <span>{t('footer.rights')}</span></p>
         <div class="footer-legal">
-          <a href="#">{lang === 'fr' ? 'Politique de confidentialité' : 'Privacy Policy'}</a>
-          <a href="#">{lang === 'fr' ? 'Conditions générales' : 'Terms & Conditions'}</a>
+          <a href="#">{t('footer.privacy')}</a>
+          <a href="#">{t('footer.terms')}</a>
         </div>
       </div>
     </div>

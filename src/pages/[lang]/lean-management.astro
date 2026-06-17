@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { BASE_PATH } from '../../config.js';
+import { translations } from '../../i18n/ui.js';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'fr' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const t = { ...translations['fr'], ...(translations[lang] || {}) };
+
+const title = "Lean Management | V2R Consulting";
+const description = "Développement du courage managérial, scripts de gestion de conflits et synergie d'équipe.";
+---
+
+<Layout lang={lang} title={title} description={description}>
+
+  <!-- HERO SECTION -->
+  <section class="service-hero">
+    <div class="container">
+      <span class="service-hero-tag">SERVICE</span>
+      <h1>Lean Management</h1>
+      <p>Éliminez le gaspillage, fluidifiez vos processus et créez une véritable synergie au sein de vos équipes opérationnelles.</p>
+    </div>
+  </section>
+
+  <!-- DETAILS SECTION -->
+  <section class="service-details">
+    <div class="container grid-2" style="align-items: center; gap: 4rem;">
+      <div class="service-split-left">
+        <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem; line-height: 1.1; max-width: 600px;">La nouvelle génération de performance.</h2>
+        <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; margin-bottom: 1.5rem;">
+          Le Lean n'est pas qu'une boîte à outils, c'est une culture de l'amélioration continue. Pour que tout le monde travaille dans le même sens, il faut une équipe unie et disciplinée.
+        </p>
+        <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; margin-bottom: 3rem;">
+          Nous accompagnons vos leaders dans le développement du courage managérial, l'utilisation de scripts de gestion de conflits et l'implantation d'un processus clair et assumé de reddition de comptes.
+        </p>
+        <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-light-solid" style="margin-top: 1rem;">
+          DISCUTER D'UN PROJET
+        </a>
+      </div>
+      
+      <div class="service-split-right">
+        <div class="service-details-card">
+          <h3>Ce que ça inclut :</h3>
+          <ul class="qualification-list qualification-list--yes service-details-list">
+            <li>
+              <div>
+                <strong>Chasse aux gaspillages</strong>
+                <span>Identification et élimination des activités à non-valeur ajoutée (Muda).</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Courage Managérial</strong>
+                <span>Formation et coaching pour équiper vos gestionnaires face aux conflits.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Synergie d'équipe</strong>
+                <span>Création de rituels de communication efficaces et d'une discipline collective.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Standardisation</strong>
+                <span>Implantation de processus clairs, incluant des sanctions progressives justes.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="service-cta">
+    <div class="container">
+      <h2>Augmentation de la performance garantie!</h2>
+      <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-dark">REJOINDRE VIESIGNERS</a>
+    </div>
+  </section>
+
+</Layout>

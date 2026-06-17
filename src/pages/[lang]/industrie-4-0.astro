@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { BASE_PATH } from '../../config.js';
+import { translations } from '../../i18n/ui.js';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'fr' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const t = { ...translations['fr'], ...(translations[lang] || {}) };
+
+const title = "Industrie 4.0 | V2R Consulting";
+const description = "Cartographie par la méthode Problem first et intégration de l'Intelligence Artificielle pour optimiser vos opérations.";
+---
+
+<Layout lang={lang} title={title} description={description}>
+
+  <!-- HERO SECTION -->
+  <section class="service-hero">
+    <div class="container">
+      <span class="service-hero-tag">SERVICE</span>
+      <h1>Industrie 4.0</h1>
+      <p>Entrez dans l'ère de la production intelligente et optimisez vos opérations grâce aux données et à l'intelligence artificielle.</p>
+    </div>
+  </section>
+
+  <!-- DETAILS SECTION -->
+  <section class="service-details">
+    <div class="container grid-2" style="align-items: center; gap: 4rem;">
+      <div class="service-split-left">
+        <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem; line-height: 1.1; max-width: 600px;">La nouvelle génération de production.</h2>
+        <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; margin-bottom: 1.5rem;">
+          Nous appliquons la méthode <strong>Problem First</strong> pour comprendre précisément vos goulots d'étranglement avant d'introduire toute technologie. L'intégration de l'IA n'est pertinente que si elle règle un problème coûteux.
+        </p>
+        <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; margin-bottom: 3rem;">
+          Que vous cherchiez des "quick wins" grâce à une approche hybride ou une intégration clé en main de capteurs IoT, nous connectons votre plancher à vos objectifs financiers.
+        </p>
+        <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-light-solid" style="margin-top: 1rem;">
+          DISCUTER D'UN PROJET
+        </a>
+      </div>
+      
+      <div class="service-split-right">
+        <div class="service-details-card">
+          <h3>Ce que ça inclut :</h3>
+          <ul class="qualification-list qualification-list--yes service-details-list">
+            <li>
+              <div>
+                <strong>Audit de maturité numérique</strong>
+                <span>Évaluation de votre infrastructure de données actuelle (ERP, MES, automates).</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Cartographie Problem First</strong>
+                <span>Identification des flux opérationnels et des freins majeurs à la productivité.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Maintenance prédictive IA</strong>
+                <span>Intégration d'algorithmes pour réduire les arrêts non planifiés.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Déploiement hybride</strong>
+                <span>Solutions adaptées à vos ressources internes pour un ROI rapide (6 à 12 mois).</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="service-cta">
+    <div class="container">
+      <h2>Augmentation de la performance garantie!</h2>
+      <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-dark">REJOINDRE VIESIGNERS</a>
+    </div>
+  </section>
+
+</Layout>
