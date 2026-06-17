@@ -15,65 +15,143 @@ const t = { ...translations['fr'], ...(translations[lang] || {}) };
 
 const title = "Lean Management | V2R Consulting";
 const description = "Développement du courage managérial, scripts de gestion de conflits et synergie d'équipe.";
+
+const faqs = [
+  {
+    q: "Qu'est-ce qu'un gaspillage (Muda)?",
+    a: "Un gaspillage est toute activité qui consomme des ressources sans ajouter de valeur pour le client, comme les attentes, les surproductions ou les mouvements inutiles."
+  },
+  {
+    q: "Le Lean convient-il à mon industrie?",
+    a: "Oui, les principes de l'amélioration continue s'appliquent à tous les secteurs, de l'assemblage manufacturier aux services professionnels."
+  },
+  {
+    q: "Comment impliquer les employés dans le Lean?",
+    a: "Nous créons des rituels de communication (comme les tournées de plancher) où chaque membre de l'équipe est encouragé à proposer des améliorations."
+  },
+  {
+    q: "Qu'est-ce que le courage managérial dans le contexte Lean?",
+    a: "C'est la capacité des leaders à maintenir la discipline collective, faire respecter les standards et aborder les problèmes de front sans complaisance."
+  },
+  {
+    q: "Combien de temps faut-il pour voir des résultats?",
+    a: "Les premières victoires rapides (quick wins) apparaissent souvent dès les premières semaines d'implantation des standards."
+  }
+];
+
+const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"></line>
+  <polyline points="12 5 19 12 12 19"></polyline>
+</svg>`;
 ---
 
 <Layout lang={lang} title={title} description={description}>
 
   <!-- HERO SECTION -->
   <section class="service-hero">
-    <div class="container">
-      <span class="service-hero-tag">SERVICE</span>
+    <div class="container mt-5">
+
       <h1>Lean Management</h1>
       <p>Éliminez le gaspillage, fluidifiez vos processus et créez une véritable synergie au sein de vos équipes opérationnelles.</p>
     </div>
   </section>
 
   <!-- DETAILS SECTION -->
-  <section class="service-details">
-    <div class="container grid-2" style="align-items: center; gap: 4rem;">
-      <div class="service-split-left">
+  <section class="service-details p-0 mt-0 mb-0">
+    <div class="split-section" style="align-items: stretch;">
+      <div class="split-left pt-5rem pb-5rem" style="background-color: transparent;">
+        <div class="split-content-left">
         <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem; line-height: 1.1; max-width: 600px;">La nouvelle génération de performance.</h2>
         <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; margin-bottom: 1.5rem;">
           Le Lean n'est pas qu'une boîte à outils, c'est une culture de l'amélioration continue. Pour que tout le monde travaille dans le même sens, il faut une équipe unie et disciplinée.
         </p>
-        <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; margin-bottom: 3rem;">
-          Nous accompagnons vos leaders dans le développement du courage managérial, l'utilisation de scripts de gestion de conflits et l'implantation d'un processus clair et assumé de reddition de comptes.
+        <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; margin-bottom: 2rem;">
+          Nous allons au-delà de la théorie : nous accompagnons vos équipes sur le terrain (gemba) pour instaurer une discipline de fer, développer le courage managérial et ancrer des rituels qui perdurent.
         </p>
-        <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-light-solid" style="margin-top: 1rem;">
+
+        <div class="service-quote">
+          <p>"Grâce à la démarche Lean de V2R, nous avons éliminé 30% de temps d'attente sur notre ligne principale et l'engagement de l'équipe n'a jamais été aussi fort."</p>
+          <div class="quote-author">Sophie Gagnon, VP Opérations, ManuPro</div>
+        </div>
+
+        <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-dark" style="margin-top: 1rem;">
           DISCUTER D'UN PROJET
         </a>
+        </div>
       </div>
       
-      <div class="service-split-right">
-        <div class="service-details-card">
+      <div class="split-right pt-5rem pb-5rem" style="background-color: #f5f7fa;">
+        <div class="split-content-right" style="display: flex; flex-direction: column; justify-content: flex-start;">
+          <div class="service-details-card" style="background: transparent; padding-top: 0; padding-bottom: 0;">
           <h3>Ce que ça inclut :</h3>
-          <ul class="qualification-list qualification-list--yes service-details-list">
+          <ul class="service-details-list">
             <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
               <div>
-                <strong>Chasse aux gaspillages</strong>
-                <span>Identification et élimination des activités à non-valeur ajoutée (Muda).</span>
+                <h4>Chasse aux gaspillages</h4>
+                <p>Identification et élimination des activités à non-valeur ajoutée (Muda).</p>
               </div>
             </li>
             <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
               <div>
-                <strong>Courage Managérial</strong>
-                <span>Formation et coaching pour équiper vos gestionnaires face aux conflits.</span>
+                <h4>Courage Managérial</h4>
+                <p>Formation et coaching pour équiper vos gestionnaires face aux conflits.</p>
               </div>
             </li>
             <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
               <div>
-                <strong>Synergie d'équipe</strong>
-                <span>Création de rituels de communication efficaces et d'une discipline collective.</span>
+                <h4>Synergie d'équipe</h4>
+                <p>Création de rituels de communication efficaces et d'une discipline collective.</p>
               </div>
             </li>
             <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
               <div>
-                <strong>Standardisation</strong>
-                <span>Implantation de processus clairs, incluant des sanctions progressives justes.</span>
+                <h4>Standardisation</h4>
+                <p>Implantation de processus clairs, incluant des sanctions progressives justes.</p>
               </div>
             </li>
           </ul>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" style="background-color: var(--bg-color); color: var(--text-color); padding: 8rem 0;">
+    <div class="container grid-2" style="align-items: flex-start; gap: 4rem;">
+      <div>
+        <span class="section-tag section-tag-teal" style="color: var(--accent-color); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">FAQ'S</span>
+        <h2 style="font-size: clamp(3rem, 5vw, 4.5rem); line-height: 1.1; margin: 2rem 0; color: var(--text-color) !important;">
+          Réponses à<br />
+          <span style="color: rgba(255,255,255,0.4);">vos<br />questions.</span>
+        </h2>
+        <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; max-width: 400px;">Tout ce que vous devez savoir pour entamer votre transformation vers le Lean Management.</p>
+      </div>
+      <div class="faq-list" style="border-top: 1px solid rgba(255,255,255,0.1);">
+        {faqs.map((faq, index) => (
+          <div class="faq-item" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <button class="faq-question" style="color: var(--text-color);">
+              <span style="color: var(--accent-color); margin-right: 1.5rem; font-size: 1rem;">{(index + 1).toString().padStart(2, '0')}.</span>
+              <span set:html={faq.q} style="flex: 1;"></span>
+              <span class="faq-icon" style="font-size: 1.2rem; font-weight: 300; width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; opacity: 0.7;">+</span>
+            </button>
+            <div class="faq-answer">
+              <p set:html={faq.a} style="opacity: 0.7; padding-left: 3rem; margin-top: -0.5rem; padding-bottom: 1.5rem;"></p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -82,7 +160,8 @@ const description = "Développement du courage managérial, scripts de gestion d
   <section class="service-cta">
     <div class="container">
       <h2>Augmentation de la performance garantie!</h2>
-      <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-dark">REJOINDRE VIESIGNERS</a>
+      <p style="font-size: 1.15rem; opacity: 0.8; max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.6;">Les gaspillages cachés drainent vos ressources chaque jour. Implantez dès aujourd'hui une véritable culture d'amélioration continue pour maximiser l'efficacité de vos processus.</p>
+      <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-dark">Réserver un diagnostic V2R <span class="btn-arrow" set:html={arrowSvg}></span></a>
     </div>
   </section>
 

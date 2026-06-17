@@ -51,8 +51,8 @@ const googleSvg = `<svg viewBox="0 0 24 24" class="source-icon">
 </svg>`;
 
 const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <line x1="7" y1="17" x2="17" y2="7"></line>
-  <polyline points="7 7 17 7 17 17"></polyline>
+  <line x1="5" y1="12" x2="19" y2="12"></line>
+  <polyline points="12 5 19 12 12 19"></polyline>
 </svg>`;
 const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
 ---
@@ -431,7 +431,7 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
         <span class="section-tag section-tag-teal" style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 1rem; display: block;">{t['cta.tag']}</span>
         <h2 style="font-size: clamp(3rem, 5vw, 4.5rem); margin-bottom: 3rem; max-width: 700px; line-height: 1.1;" set:html={t['cta.title']}></h2>
         <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-sharp">
-          {t['cta.button']} <span class="btn-arrow">↗</span>
+          {t['cta.button']} <span class="btn-arrow" set:html={arrowSvg}></span>
         </a>
       </div>
       <div class="cta-right" style="align-self: flex-end; padding-bottom: 2rem;">

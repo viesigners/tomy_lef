@@ -145,7 +145,7 @@ export const translations = {
     "footer.privacy": "Politique de confidentialité",
     "footer.terms": "Conditions générales",
 
-    "contact.hero.title": "Contactez-<span class=\"font-parklane\" style=\"color: var(--accent-color);\">nous</span>",
+    "contact.hero.title": "Contactez-<span style=\"color: var(--accent-color);\">nous</span>",
     "contact.hero.subtitle": "Parlez-nous de votre projet. Nous vous répondrons dans les plus brefs délais pour planifier un appel d'exploration gratuit.",
     "contact.info.title": "Nos coordonnées",
     "contact.info.phone.label": "Téléphone",

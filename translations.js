@@ -76,7 +76,7 @@ export const translations = {
     "faq.a5": "Chaque service que nous offrons vient avec <strong>une garantie</strong> que les autres agences n'osent pas offrir. <a href=\"./contact.html\">Contactez-nous</a> pour en connaître les détails.",
     "faq.q6": "Travaillez-vous avec des grandes ou des petites entreprises?",
     "faq.a6": "Nous offrons des services pour les entreprises en démarrage et les PME, comme pour les grandes corporations. Le principal critère est que vous devez avoir le désir de croître.<br><br>Si vous sentez qu'un service pourrait vous aider, <a href=\"./contact.html\">contactez-nous</a> et nous évaluerons comment vous soutenir au mieux dans vos objectifs, soit à l'interne ou par l'entremise de notre réseau restreint d'experts sélectionnés.",
-    "contact.hero.title": "Contactez-<span class=\"font-parklane\" style=\"color: var(--accent-color);\">nous</span>",
+    "contact.hero.title": "Contactez-<span style=\"color: var(--accent-color);\">nous</span>",
     "contact.hero.subtitle": "Parlez-nous de votre projet. Nous vous répondrons dans les plus brefs délais pour planifier un appel d'exploration gratuit.",
     "contact.info.title": "Nos coordonnées",
     "contact.info.phone.label": "Téléphone",

@@ -15,65 +15,143 @@ const t = { ...translations['fr'], ...(translations[lang] || {}) };
 
 const title = "Gestion des opérations | V2R Consulting";
 const description = "Évaluation approfondie, réorganisation chirurgicale des rôles (RACI) et alignement des compétences.";
+
+const faqs = [
+  {
+    q: "Qu'est-ce que l'évaluation des opérations?",
+    a: "C'est une analyse approfondie de vos processus actuels pour identifier les inefficacités et les goulots d'étranglement qui nuisent à votre rentabilité."
+  },
+  {
+    q: "Comment fonctionne la matrice RACI?",
+    a: "Nous clarifions les rôles de chaque membre de l'équipe (Responsable, Approbateur, Consulté, Informé) pour éliminer la confusion et améliorer l'imputabilité."
+  },
+  {
+    q: "En quoi consiste la gestion proactive?",
+    a: "Au lieu de réagir aux problèmes (éteindre des feux), nous mettons en place des indicateurs et des routines pour anticiper et prévenir les écarts de performance."
+  },
+  {
+    q: "Combien de temps dure une réorganisation?",
+    a: "Bien que chaque entreprise soit unique, nos interventions génèrent généralement des résultats mesurables dans les 3 à 6 premiers mois."
+  },
+  {
+    q: "Mes gestionnaires seront-ils accompagnés?",
+    a: "Absolument. Nous offrons du coaching sur le terrain pour nous assurer que les nouveaux rôles et processus sont bien compris et adoptés."
+  }
+];
+
+const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"></line>
+  <polyline points="12 5 19 12 12 19"></polyline>
+</svg>`;
 ---
 
 <Layout lang={lang} title={title} description={description}>
 
   <!-- HERO SECTION -->
   <section class="service-hero">
-    <div class="container">
-      <span class="service-hero-tag">SERVICE</span>
+    <div class="container mt-5">
+
       <h1>Gestion des opérations</h1>
       <p>Passez du mode pompier à une gestion proactive pour maximiser votre rentabilité et l'efficacité de vos équipes.</p>
     </div>
   </section>
 
   <!-- DETAILS SECTION -->
-  <section class="service-details">
-    <div class="container grid-2" style="align-items: center; gap: 4rem;">
-      <div class="service-split-left">
+  <section class="service-details p-0 mt-0 mb-0">
+    <div class="split-section" style="align-items: stretch;">
+      <div class="split-left pt-5rem pb-5rem" style="background-color: transparent;">
+        <div class="split-content-left">
         <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem; line-height: 1.1; max-width: 600px;">La nouvelle génération de management.</h2>
         <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; margin-bottom: 1.5rem;">
           L'inefficacité opérationnelle découle souvent d'un manque de clarté dans les responsabilités. Nous offrons une évaluation approfondie de vos processus actuels.
         </p>
-        <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; margin-bottom: 3rem;">
+        <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; margin-bottom: 2rem;">
           Grâce à une réorganisation chirurgicale des rôles et un alignement des compétences basé sur la matrice RACI (jusqu'à 1000 points de contrôle), vos gestionnaires arrêteront d'éteindre des feux pour enfin piloter la croissance.
         </p>
-        <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-light-solid" style="margin-top: 1rem;">
+        
+        <div class="service-quote">
+          <p>"L'intervention de V2R a complètement transformé notre façon de gérer le quotidien. Nos superviseurs anticipent maintenant les problèmes au lieu de les subir."</p>
+          <div class="quote-author">Marc Tremblay, Directeur d'usine, Alpha Tech</div>
+        </div>
+
+        <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-dark" style="margin-top: 1rem;">
           DISCUTER D'UN PROJET
         </a>
+        </div>
       </div>
       
-      <div class="service-split-right">
-        <div class="service-details-card">
+      <div class="split-right pt-5rem pb-5rem" style="background-color: #f5f7fa;">
+        <div class="split-content-right" style="display: flex; flex-direction: column; justify-content: flex-start;">
+          <div class="service-details-card" style="background: transparent; padding-top: 0; padding-bottom: 0;">
           <h3>Ce que ça inclut :</h3>
-          <ul class="qualification-list qualification-list--yes service-details-list">
+          <ul class="service-details-list">
             <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
               <div>
-                <strong>Évaluation des opérations</strong>
-                <span>Diagnostic terrain approfondi de vos pratiques de gestion quotidiennes.</span>
+                <h4>Évaluation des opérations</h4>
+                <p>Diagnostic terrain approfondi de vos pratiques de gestion quotidiennes.</p>
               </div>
             </li>
             <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
               <div>
-                <strong>Réorganisation RACI</strong>
-                <span>Clarification chirurgicale de qui fait quoi, qui décide et qui est imputable.</span>
+                <h4>Réorganisation RACI</h4>
+                <p>Clarification chirurgicale de qui fait quoi, qui décide et qui est imputable.</p>
               </div>
             </li>
             <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
               <div>
-                <strong>Alignement RH</strong>
-                <span>Optimisation de la performance de vos ressources humaines selon leurs forces.</span>
+                <h4>Alignement RH</h4>
+                <p>Optimisation de la performance de vos ressources humaines selon leurs forces.</p>
               </div>
             </li>
             <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
               <div>
-                <strong>KPIs décisionnels</strong>
-                <span>Mise en place de tableaux de bord pertinents pour des décisions éclairées.</span>
+                <h4>KPIs décisionnels</h4>
+                <p>Mise en place de tableaux de bord pertinents pour des décisions éclairées.</p>
               </div>
             </li>
           </ul>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" style="background-color: var(--bg-color); color: var(--text-color); padding: 8rem 0;">
+    <div class="container grid-2" style="align-items: flex-start; gap: 4rem;">
+      <div>
+        <span class="section-tag section-tag-teal" style="color: var(--accent-color); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">FAQ'S</span>
+        <h2 style="font-size: clamp(3rem, 5vw, 4.5rem); line-height: 1.1; margin: 2rem 0; color: var(--text-color) !important;">
+          Réponses à<br />
+          <span style="color: rgba(255,255,255,0.4);">vos<br />questions.</span>
+        </h2>
+        <p style="font-size: 1.15rem; opacity: 0.8; line-height: 1.6; max-width: 400px;">Tout ce que vous devez savoir pour entamer votre transformation opérationnelle.</p>
+      </div>
+      <div class="faq-list" style="border-top: 1px solid rgba(255,255,255,0.1);">
+        {faqs.map((faq, index) => (
+          <div class="faq-item" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <button class="faq-question" style="color: var(--text-color);">
+              <span style="color: var(--accent-color); margin-right: 1.5rem; font-size: 1rem;">{(index + 1).toString().padStart(2, '0')}.</span>
+              <span set:html={faq.q} style="flex: 1;"></span>
+              <span class="faq-icon" style="font-size: 1.2rem; font-weight: 300; width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; opacity: 0.7;">+</span>
+            </button>
+            <div class="faq-answer">
+              <p set:html={faq.a} style="opacity: 0.7; padding-left: 3rem; margin-top: -0.5rem; padding-bottom: 1.5rem;"></p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -82,7 +160,8 @@ const description = "Évaluation approfondie, réorganisation chirurgicale des r
   <section class="service-cta">
     <div class="container">
       <h2>Augmentation de la performance garantie!</h2>
-      <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-dark">REJOINDRE VIESIGNERS</a>
+      <p style="font-size: 1.15rem; opacity: 0.8; max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.6;">Ne laissez pas vos équipes s'épuiser à éteindre des feux. Passez dès aujourd'hui à une gestion proactive pour retrouver le contrôle de votre rentabilité et de votre croissance.</p>
+      <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-dark">Réserver un diagnostic V2R <span class="btn-arrow" set:html={arrowSvg}></span></a>
     </div>
   </section>
 
