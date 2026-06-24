@@ -1039,6 +1039,7 @@ body.menu-open .hamburger .line-bottom {
   line-height: 1;
   background: linear-gradient(to right, #ffffff, #00C9A7);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.2rem;
 }
@@ -1295,6 +1296,7 @@ body.menu-open .hamburger .line-bottom {
   font-style: italic;
   display: -webkit-box;
   -webkit-line-clamp: 8;
+  line-clamp: 8;
   -webkit-box-orient: vertical;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -1302,6 +1304,7 @@ body.menu-open .hamburger .line-bottom {
 
 .testimonial-card.is-expanded .testimonial-text {
   -webkit-line-clamp: unset;
+  line-clamp: unset;
   display: block;
 }
 
@@ -1358,10 +1361,6 @@ body.menu-open .hamburger .line-bottom {
   /* Dark navy from variables */
   padding: 6rem 0 4rem;
   color: white;
-}
-
-.site-footer .container {
-  /* Inherits 1400px max-width from global .container */
 }
 
 .footer-grid {

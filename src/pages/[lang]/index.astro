@@ -61,7 +61,7 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <div class="container">
+    <div class="container mt-5">
       <div class="row">
         <div class="col-12 col-lg-9">
           <span class="section-tag opacity-75 mb-4">{t['home.banner.callout']}</span>
@@ -97,7 +97,7 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
     <div class="split-section">
       <div class="split-left pt-5rem">
         <div class="split-content-left">
-          <span class="section-tag section-tag-teal" style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 1rem; display: block;">{t['problem.tag']}</span>
+          <span class="section-tag section-tag-teal small mb-3 d-block">{t['problem.tag']}</span>
           <h2 class="split-title mt-0">
             {t['problem.title.part1']}
             <span class="text-silver">{t['problem.title.part2']}</span>
@@ -164,7 +164,7 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
   <section id="about">
     <div class="container">
       <span class="section-tag-red">{t['about.tag']}</span>
-      <h2 style="font-size: clamp(2rem, 5vw, 3.8rem); margin-bottom: 5rem; max-width: 1100px;">
+      <h2 class="display-5 mb-5 w-100">
         {t['about.title']}
       </h2>
 
@@ -174,22 +174,18 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
           <div class="founder-info">
             <h4>Tomy Lefebvre</h4>
             <p>{t['about.who_I_am']}</p>
-            <div class="logo-placeholder" style="margin-top: 1.5rem; opacity: 0.6; display: flex; align-items: center; gap: 0.5rem;">
+            <div class="logo-placeholder mt-4 opacity-75 d-flex align-items-center gap-2">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 12h3v9h6v-6h4v6h6v-9h3L12 2z" /></svg>
               UNIVERSITÉ LAVAL
             </div>
           </div>
         </div>
 
-        <div style="padding-top: 1rem;">
-          <h3 style="font-size: 2rem; margin-bottom: 2rem;">{t['about.hello']}</h3>
-          <div style="display: flex; flex-direction: column; gap: 1.8rem; font-size: 1.2rem; opacity: 0.9; line-height: 1.6;">
-            <p>
-              {lang === 'fr'
-                ? <>{t['about.desc.p1']}<strong>{t['about.desc.p2']}</strong>{t['about.desc.p3']}<strong>{t['about.desc.p4']}</strong>{t['about.desc.p5']}</>
-                : <>{t['about.desc.p1']}<strong>{t['about.desc.p2']}</strong>{t['about.desc.p3']}<strong>{t['about.desc.p4']}</strong>{t['about.desc.p5']}</>
-              }
-            </p>
+        <div class="pt-3">
+          <h3 class="fs-2 mb-4">{t['about.hello']}</h3>
+          <div class="d-flex flex-column gap-4 fs-5 opacity-75 lh-base">
+            <p>{t['about.desc.p1']}</p>
+            <p>{t['about.desc.p2']}</p>
           </div>
           <div class="mini-ticker">
             <span>{t['about.seen']}</span>
@@ -238,7 +234,7 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
         <span class="badge-value">Top 3%</span>
         <span class="badge-sub">{t['services.toptal.sub']}</span>
       </div>-->
-      <h2 style="margin-bottom: 4rem;">
+      <h2 class="mb-5">
         {t['services.title']}
       </h2>
 
@@ -273,8 +269,8 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
       <div class="performance-header">
         <h2>{t['performance.title']}</h2>
         <p>{t['performance.desc']}</p>
-        <h3 style="margin-top: 4rem; color: #e63946; font-size: 2rem;">{t['performance.guineapig.title']}</h3>
-        <p style="font-size: 1.1rem; opacity: 0.9;">{t['performance.guineapig.desc']}</p>
+        <h3 class="mt-4 mb-3 fs-2">{t['performance.guineapig.title']}</h3>
+        <p>{t['performance.guineapig.desc']}</p>
       </div>
       <div class="stats-grid">
         <div class="stat-card">
@@ -303,8 +299,8 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
 
   <!-- PORTFOLIO SECTION -->
   <section id="portfolio" class="section-light">
-    <div class="container" style="text-align: center;">
-      <h2 style="margin-bottom: 5rem; font-size: clamp(2rem, 5vw, 3.5rem);">
+    <div class="container text-center">
+      <h2 class="display-5 mb-5">
         {t['portfolio.title']}
       </h2>
       <div class="grid-2">
@@ -318,19 +314,19 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
           </div>
         ))}
       </div>
-      <div style="margin-top: 6rem; margin-bottom: 4rem;">
-        <h3 style="font-size: 1.8rem; opacity: 0.9; font-weight: 600;">
+      <div class="my-5 py-3">
+        <h3 class="fs-3 opacity-75 fw-semibold">
           {t['portfolio.subtitle']}
         </h3>
       </div>
       <div class="awards-ticker">
-        <span style="opacity: 0.6; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">{t['portfolio.recognized']}</span>
+        <span class="opacity-50 text-uppercase small">{t['portfolio.recognized']}</span>
         <div class="awards-logos">
           <span>OCTAS</span><span>osentreprendre</span><span>Gartner</span><span>AWWWWARDS</span>
         </div>
       </div>
-      <div style="margin-top: 5rem;">
-        <a href={`${BASE_PATH}/${lang}/contact/`} class="btn btn-primary" style="background-color: #e63946; color: white; padding: 1.2rem 4rem;">
+      <div class="mt-5">
+        <a href={`${BASE_PATH}/${lang}/contact/`} class="btn btn-danger px-5 py-3">
           {t['portfolio.cta']}
         </a>
       </div>
@@ -340,12 +336,12 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
   <!-- QUALIFICATION SECTION -->
   <section id="qualification" class="section-light">
     <div class="container">
-      <h2 style="max-width: 900px; margin-bottom: 4rem;">
+      <h2 class="w-75 mb-5">
         <>{t['qualification.title'].split('PAS')[0]}<em>PAS</em>{t['qualification.title'].split('PAS')[1]}</>
       </h2>
-      <div class="grid-2" style="align-items: flex-start; gap: 5rem; margin-bottom: 3rem;">
+      <div class="grid-2 align-items-start gap-5 mb-4">
         <div>
-          <h3 style="font-size: 1.6rem; margin-bottom: 2rem; color: var(--text-dark);">
+          <h3 class="fs-3 mb-4 text-dark">
             {t['qualification.yes.title']}
           </h3>
           <ul class="qualification-list qualification-list--yes">
@@ -355,7 +351,7 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
           </ul>
         </div>
         <div>
-          <h3 style="font-size: 1.6rem; margin-bottom: 2rem; color: var(--text-dark);">
+          <h3 class="fs-3 mb-4 text-dark">
             {t['qualification.no.title']}
           </h3>
           <ul class="qualification-list qualification-list--no">
@@ -365,8 +361,8 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
           </ul>
         </div>
       </div>
-      <p style="font-size: 1.05rem; opacity: 0.85;">
-        <>{t['qualification.footer.part1']}<strong>{t['qualification.footer.part2']}<a href={`${BASE_PATH}/${lang}/contact/`} style="color: var(--text-dark); text-decoration: underline; font-weight: 700;">{t['qualification.footer.part3']}</a></strong></>
+      <p class="opacity-75">
+        <>{t['qualification.footer.part1']}<strong>{t['qualification.footer.part2']}<a href={`${BASE_PATH}/${lang}/contact/`} class="text-dark text-decoration-underline fw-bold">{t['qualification.footer.part3']}</a></strong></>
       </p>
     </div>
   </section>
@@ -374,7 +370,7 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
   <!-- TESTIMONIALS SECTION -->
   <section id="testimonials">
     <div class="container">
-      <h2 style="text-align: center; margin-bottom: 5rem;">{t['testimonials.title']}</h2>
+      <h2 class="text-center mb-5">{t['testimonials.title']}</h2>
       <div class="masonry-grid">
         {[1, 2, 3].map(col => (
           <div class="masonry-col">
@@ -392,7 +388,7 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
           </div>
         ))}
       </div>
-      <div style="text-align: center; margin-top: 4rem;">
+      <div class="text-center mt-5">
         <a href={`${BASE_PATH}/${lang}/contact/`} class="btn btn-dashed">
           <span class="btn-dashed-icon">+</span> {t['testimonials.cta']}
         </a>
@@ -402,18 +398,18 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
 
   <!-- FAQ SECTION -->
   <section id="faq" class="section-light">
-    <div class="container grid-2" style="align-items: flex-start;">
+    <div class="container grid-2 align-items-start">
       <div>
         <span class="section-tag">{t['faq.tag']}</span>
-        <h2 style="margin-bottom: 2rem;">{t['faq.title']}</h2>
-        <p style="font-size: 1.2rem; opacity: 0.8;">{t['faq.subtitle']}</p>
+        <h2 class="mb-4">{t['faq.title']}</h2>
+        <p class="fs-5 opacity-75">{t['faq.subtitle']}</p>
       </div>
       <div class="faq-list">
         {faqs.map(faq => (
           <div class="faq-item">
             <button class="faq-question">
               <span set:html={faq.q}></span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span>
             </button>
             <div class="faq-answer">
               <p set:html={faq.a}></p>
@@ -428,14 +424,14 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
   <section id="contact" class="cta-section">
     <div class="container grid-2 cta-content-wrapper">
       <div class="cta-left">
-        <span class="section-tag section-tag-teal" style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 1rem; display: block;">{t['cta.tag']}</span>
-        <h2 style="font-size: clamp(3rem, 5vw, 4.5rem); margin-bottom: 3rem; max-width: 700px; line-height: 1.1;" set:html={t['cta.title']}></h2>
+        <span class="section-tag section-tag-teal small mb-3 d-block">{t['cta.tag']}</span>
+        <h2 class="display-3 mb-5 w-75 lh-sm" set:html={t['cta.title']}></h2>
         <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-sharp">
           {t['cta.button']} <span class="btn-arrow" set:html={arrowSvg}></span>
         </a>
       </div>
-      <div class="cta-right" style="align-self: flex-end; padding-bottom: 2rem;">
-        <p style="font-size: 1.15rem; opacity: 0.8; max-width: 400px; line-height: 1.6; margin-left: auto; text-align: left;">{t['cta.subtitle']}</p>
+      <div class="cta-right align-self-end pb-4">
+        <p class="fs-5 opacity-75 lh-base w-75 ms-auto text-start">{t['cta.subtitle']}</p>
       </div>
     </div>
     <div class="cta-watermark">USINE</div>
