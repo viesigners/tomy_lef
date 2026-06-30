@@ -65,7 +65,7 @@ h1 {
 }
 
 p {
-  color: rgb(159, 159, 169);
+  color: #ffffff;
 }
 
 h2 {
@@ -349,7 +349,7 @@ section {
   max-width: 700px;
   margin: 0 0 3rem 0;
   opacity: 0.8;
-  color: rgb(159, 159, 169);
+  color: #ffffff;
 }
 
 /* Layout Util */
@@ -497,7 +497,7 @@ section {
 }
 
 .section-light .card-minimal:hover p {
-  color: rgb(159, 159, 169) !important;
+  color: #ffffff !important;
 }
 
 .card-minimal::before {
@@ -991,7 +991,6 @@ body.menu-open .hamburger .line-bottom {
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  opacity: 0.5;
   margin-top: 4rem;
   padding-top: 4rem;
   border-top: 1px solid rgba(251, 245, 227, 0.1);
@@ -1690,7 +1689,7 @@ textarea.form-control {
 /* Base */
 body {
   background-color: var(--bg-color) !important;
-  color: var(--text-muted) !important;
+  color: var(--text-color) !important;
   font-family: var(--font-body) !important;
   line-height: 1.7 !important;
 }

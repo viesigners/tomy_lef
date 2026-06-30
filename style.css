@@ -989,7 +989,6 @@ body.menu-open .hamburger .line-bottom {
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  opacity: 0.5;
   margin-top: 4rem;
   padding-top: 4rem;
   border-top: 1px solid rgba(251, 245, 227, 0.1);
