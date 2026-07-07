@@ -80,14 +80,15 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
       <div class="container text-start fs-sm letter-spacing-2 text-uppercase opacity-50 mb-4 fw-semibold">
         <span set:html={t['home.advised']}></span>
       </div>
-      <div class="ticker" id="logoTicker">
-        <img src="https://logo.clearbit.com/warnerbros.com" alt="Warner Brothers" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'40\'><text x=\'0\' y=\'25\' font-family=\'sans-serif\' font-size=\'20\' font-weight=\'bold\' fill=\'white\'>WARNER BROS</text></svg>'" />
-        <img src="https://logo.clearbit.com/marvel.com" alt="Marvel" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'40\'><text x=\'0\' y=\'25\' font-family=\'sans-serif\' font-size=\'20\' font-weight=\'bold\' fill=\'white\'>MARVEL</text></svg>'" />
-        <img src="https://logo.clearbit.com/salesforce.com" alt="Salesforce" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'40\'><text x=\'0\' y=\'25\' font-family=\'sans-serif\' font-size=\'20\' font-weight=\'bold\' fill=\'white\'>SALESFORCE</text></svg>'" />
-        <img src="https://logo.clearbit.com/disney.com" alt="Disney" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'40\'><text x=\'0\' y=\'25\' font-family=\'sans-serif\' font-size=\'20\' font-weight=\'bold\' fill=\'white\'>DISNEY</text></svg>'" />
-        <img src="https://logo.clearbit.com/hp.com" alt="HP" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'40\'><text x=\'0\' y=\'25\' font-family=\'sans-serif\' font-size=\'20\' font-weight=\'bold\' fill=\'white\'>HP</text></svg>'" />
-        <img src="https://logo.clearbit.com/dell.com" alt="Dell" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'40\'><text x=\'0\' y=\'25\' font-family=\'sans-serif\' font-size=\'20\' font-weight=\'bold\' fill=\'white\'>DELL</text></svg>'" />
-        <img src="https://logo.clearbit.com/ubisoft.com" alt="Ubisoft" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'40\'><text x=\'0\' y=\'25\' font-family=\'sans-serif\' font-size=\'20\' font-weight=\'bold\' fill=\'white\'>UBISOFT</text></svg>'" />
+      <div class="ticker" id="logoTicker">        <img src="https://via.placeholder.com/150x40.png?text=Logo+Client+1" alt={t['home.logo.client_1.alt']} />
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+Client+2" alt={t['home.logo.client_2.alt']} />
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+Client+3" alt={t['home.logo.client_3.alt']} />
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+Client+4" alt={t['home.logo.client_4.alt']} />
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+Client+5" alt={t['home.logo.client_5.alt']} />
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+Client+6" alt={t['home.logo.client_6.alt']} />
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+Client+7" alt={t['home.logo.client_7.alt']} />
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+Client+8" alt={t['home.logo.client_8.alt']} />
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+Client+9" alt={t['home.logo.client_9.alt']} />
       </div>
     </div>
   </section>
@@ -140,7 +141,7 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
     <div class="split-section">
       <div class="split-left pt-custom-4">
         <div class="split-content-left">
-          <div class="placeholder-img h-400 rounded-3 bg-light-custom"></div>
+          <img src="https://via.placeholder.com/800x600.png?text=IMAGE+PLACEHOLDER" alt={t['problem.friction.image.alt']} class="w-100 rounded-3 object-fit-cover placeholder-img" />
         </div>
       </div>
       <div class="split-right pt-custom-4">
@@ -170,14 +171,11 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
 
       <div class="about-grid">
         <div class="about-image-column">
-          <div class="placeholder-img"></div>
+          <img src="https://via.placeholder.com/800x800.png?text=IMAGE+PLACEHOLDER" alt={t['about.founder.image.alt']} class="w-100 rounded-3 object-fit-cover placeholder-img" />
           <div class="founder-info">
-            <h4>Tomy Lefebvre</h4>
-            <p>{t['about.who_I_am']}</p>
-            <div class="logo-placeholder mt-4 opacity-75 d-flex align-items-center gap-2">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 12h3v9h6v-6h4v6h6v-9h3L12 2z" /></svg>
-              UNIVERSITÉ LAVAL
-            </div>
+            <h4>{t['about.founder_name']}</h4>
+            <p>{t['about.role']}</p>
+            <img src="https://via.placeholder.com/200x30.png?text=Éducation" alt={t['about.logo.education.alt']} class="mt-4 opacity-75" />
           </div>
         </div>
 
@@ -189,11 +187,11 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
           </div>
           <div class="mini-ticker opacity-75">
             <span>{t['about.seen']}</span>
-            <div class="logo-placeholder">Logo</div>
-            <div class="logo-placeholder">Logo</div>
-            <div class="logo-placeholder">Logo</div>
-            <div class="logo-placeholder">Logo</div>
-            <div class="logo-placeholder">Logo</div>
+            <img src="https://via.placeholder.com/80x30.png?text=Logo" alt={t['about.logo.seen_1.alt']} class="logo-placeholder" />
+            <img src="https://via.placeholder.com/80x30.png?text=Logo" alt={t['about.logo.seen_2.alt']} class="logo-placeholder" />
+            <img src="https://via.placeholder.com/80x30.png?text=Logo" alt={t['about.logo.seen_3.alt']} class="logo-placeholder" />
+            <img src="https://via.placeholder.com/80x30.png?text=Logo" alt={t['about.logo.seen_4.alt']} class="logo-placeholder" />
+            <img src="https://via.placeholder.com/80x30.png?text=Logo" alt={t['about.logo.seen_5.alt']} class="logo-placeholder" />
           </div>
         </div>
       </div>
