@@ -2,8 +2,8 @@
 import { BASE_PATH } from '../config.js';
 import { useTranslations } from '../i18n/utils.js';
 // src/layouts/Layout.astro
-// Props: lang (string), title (string), description (string)
-const { lang = 'fr', title, description } = Astro.props;
+// Props: lang (string), title (string), description (string), image (string)
+const { lang = 'fr', title, description, image } = Astro.props;
 
 const t = useTranslations(lang);
 const altLang = lang === 'fr' ? 'en' : 'fr';
@@ -16,6 +16,8 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   {description && <meta name="description" content={description} />}
+  {image && <meta property="og:image" content={image} />}
+  {image && <meta name="twitter:image" content={image} />}
 
   <!-- hreflang SEO tags -->
   <link rel="alternate" hreflang="fr" href={`${BASE_PATH}/fr/`} />

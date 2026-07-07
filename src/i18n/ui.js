@@ -1,5 +1,9 @@
 export const translations = {
   fr: {
+    "home.meta.title": "V2R Consulting | Fr",
+    "home.meta.description": "Augmentez votre productivité jusqu'à 50% sans embaucher, grâce à la méthode V2R et l'IA.",
+    "home.meta.image": "",
+
     "nav.about": "À propos",
     "nav.service_1": "Industrie 4.0",
     "nav.service_2": "Gestion des opérations",
@@ -153,6 +157,7 @@ export const translations = {
 
     "contact.meta.title": "Contact | V2R Consulting",
     "contact.meta.description": "Contactez V2R Consulting pour transformer votre entreprise manufacturière.",
+    "contact.meta.image": "",
     "contact.hero.title": "Contactez-nous",
     "contact.hero.subtitle": "Prêt à libérer le potentiel de votre usine ? Parlez-nous de votre projet.",
     "contact.info.tag": "NOUS JOINDRE",
@@ -174,6 +179,7 @@ export const translations = {
 
     "service_1.meta.title": "Industrie 4.0 | V2R Consulting",
     "service_1.meta.description": "Cartographie par la méthode Problem first et intégration de l'Intelligence Artificielle pour optimiser vos opérations.",
+    "service_1.meta.image": "",
     "service_1.hero.title": "Industrie 4.0",
     "service_1.hero.subtitle": "Entrez dans l'ère de la production intelligente et optimisez vos opérations grâce aux données et à l'intelligence artificielle.",
     "service_1.details.title": "La nouvelle génération de production.",
@@ -210,6 +216,7 @@ export const translations = {
 
     "service_2.meta.title": "Gestion des opérations | V2R Consulting",
     "service_2.meta.description": "Évaluation approfondie, réorganisation chirurgicale des rôles (RACI) et alignement des compétences.",
+    "service_2.meta.image": "",
     "service_2.hero.title": "Gestion des opérations",
     "service_2.hero.subtitle": "Passez du mode pompier à une gestion proactive pour maximiser votre rentabilité et l'efficacité de vos équipes.",
     "service_2.details.title": "La nouvelle génération de management.",
@@ -240,6 +247,7 @@ export const translations = {
 
     "service_3.meta.title": "Lean Management | V2R Consulting",
     "service_3.meta.description": "Développement du courage managérial, scripts de gestion de conflits et synergie d'équipe.",
+    "service_3.meta.image": "",
     "service_3.hero.title": "Lean Management",
     "service_3.hero.subtitle": "Éliminez le gaspillage, fluidifiez vos processus et créez une véritable synergie au sein de vos équipes opérationnelles.",
     "service_3.details.title": "La nouvelle génération de performance.",
@@ -270,6 +278,7 @@ export const translations = {
 
     "service_4.meta.title": "Leadership industriel | V2R Consulting",
     "service_4.meta.description": "Développement du courage managérial, scripts de gestion de conflits et synergie d'équipe.",
+    "service_4.meta.image": "",
     "service_4.hero.title": "Leadership industriel",
     "service_4.hero.subtitle": "Transformez vos superviseurs en véritables leaders opérationnels capables d'engager leurs équipes.",
     "service_4.details.title": "La nouvelle génération de leaders.",
@@ -299,6 +308,8 @@ export const translations = {
     "service_4.cta.subtitle": "Le manque d'encadrement coûte cher en rétention et en efficacité. Équipez vos superviseurs dès aujourd'hui du courage managérial nécessaire pour bâtir une équipe engagée et performante."
   },
   en: {
-
+    "home.meta.title": "V2R Consulting | Eng",
+    "home.meta.description": "Canada's #1 digital performance agency. Maximize your ROI - Sales funnels | App optimization | Profitable websites | +1 581-502-1115.",
+    "home.meta.image": ""
   }
 };
