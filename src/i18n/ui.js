@@ -164,7 +164,7 @@ export const translations = {
     "contact.info.title": "Discutons de <span style=\"color: #94A3B8;\">votre projet</span>",
     "contact.info.desc": "Accès direct à nos experts. Nous maintenons une stricte confidentialité pour toutes les demandes et mandats.",
     "contact.info.line1.label": "LIGNE DIRECTE",
-    "contact.info.line1.value": "+1 581-502-1115",
+    "contact.info.line1.value": "+1 234-567-8901",
     "contact.info.line1.hours": "Lun-Ven / 9h-17h",
     "contact.info.line2.label": "BUREAU PRINCIPAL",
     "contact.info.line2.value": "Québec, QC, Canada",
