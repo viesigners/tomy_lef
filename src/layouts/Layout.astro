@@ -8,16 +8,32 @@ const { lang = 'fr', title, description, image } = Astro.props;
 const t = useTranslations(lang);
 const altLang = lang === 'fr' ? 'en' : 'fr';
 const altLabel = lang === 'fr' ? 'EN' : 'FR';
+
+const defaultTitle = t('home.meta.title') || 'V2R Consulting';
+const defaultDesc = t('home.meta.description') || 'V2R Consulting - Experts en productivité manufacturière.';
+const finalTitle = title || defaultTitle;
+const finalDescription = description || defaultDesc;
 ---
 <!DOCTYPE html>
 <html lang={lang}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{title}</title>
+  <title>{finalTitle}</title>
   <link rel="icon" type="image/png" href={`${BASE_PATH}/favicon.png`} />
-  {description && <meta name="description" content={description} />}
+  <meta name="description" content={finalDescription} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={finalTitle} />
+  <meta property="og:description" content={finalDescription} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url} />
   {image && <meta property="og:image" content={image} />}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={finalTitle} />
+  <meta name="twitter:description" content={finalDescription} />
   {image && <meta name="twitter:image" content={image} />}
 
   <!-- hreflang SEO tags -->

@@ -1,3 +1,5 @@
+export const SITE_URL = 'https://v2rconsulting.com';
+
 export const translations = {
   fr: {
     "nav.about": "À propos",
