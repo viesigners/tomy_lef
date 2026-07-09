@@ -1,9 +1,5 @@
 export const translations = {
   fr: {
-    "home.meta.title": "V2R Consulting | Fr",
-    "home.meta.description": "Augmentez votre productivité jusqu'à 50% sans embaucher, grâce à la méthode V2R et l'IA.",
-    "home.meta.image": "",
-
     "nav.about": "À propos",
     "nav.service_1": "Industrie 4.0",
     "nav.service_2": "Gestion des opérations",
@@ -14,12 +10,24 @@ export const translations = {
     "header.menu": "Menu",
     "header.close": "Fermer",
 
+    "home.meta.title": "V2R Consulting | Fr",
+    "home.meta.description": "Augmentez votre productivité jusqu'à 50% sans embaucher, grâce à la méthode V2R et l'IA.",
+    "home.meta.image": "",
     "home.banner.callout": "Pour dirigeants d'entreprises manufacturières — 50 employés et plus",
     "home.banner.title,part1": "Augmentez votre productivité jusqu'à 50 % sans embaucher,",
     "home.banner.title,part2": "grâce à la méthode V2R et l'IA",
     "home.banner.paragraph": "Obtenez l'heure juste sur la réalité de votre plancher, prenez des décisions éclairées et transformez votre vision stratégique en résultats concrets.</strong>",
     "home.banner.cta": "Réserver un diagnostic V2R",
     "home.banner.cta-incentive": "Seulement 3 places disponibles en {month}.",
+    "home.logo.client_1.alt": "Logo client 1",
+    "home.logo.client_2.alt": "Logo client 2",
+    "home.logo.client_3.alt": "Logo client 3",
+    "home.logo.client_4.alt": "Logo client 4",
+    "home.logo.client_5.alt": "Logo client 5",
+    "home.logo.client_6.alt": "Logo client 6",
+    "home.logo.client_7.alt": "Logo client 7",
+    "home.logo.client_8.alt": "Logo client 8",
+    "home.logo.client_9.alt": "Logo client 9",
 
     "problem.tag": "DÉFIS DE CROISSANCE",
     "problem.title.part1": "Vous savez que votre usine ",
@@ -50,15 +58,6 @@ export const translations = {
     "about.logo.seen_3.alt": "Média 3",
     "about.logo.seen_4.alt": "Média 4",
     "about.logo.seen_5.alt": "Média 5",
-    "home.logo.client_1.alt": "Logo client 1",
-    "home.logo.client_2.alt": "Logo client 2",
-    "home.logo.client_3.alt": "Logo client 3",
-    "home.logo.client_4.alt": "Logo client 4",
-    "home.logo.client_5.alt": "Logo client 5",
-    "home.logo.client_6.alt": "Logo client 6",
-    "home.logo.client_7.alt": "Logo client 7",
-    "home.logo.client_8.alt": "Logo client 8",
-    "home.logo.client_9.alt": "Logo client 9",
 
     "approach.title": "La méthode V2R : 4 piliers pour libérer votre capacité de production cachée",
     "approach.desc.p1": "Plutôt que de saupoudrer des solutions superficielles, nous attaquons les vrais freins à la performance à travers 4 axes d'intervention :",
@@ -182,6 +181,7 @@ export const translations = {
     "service_1.meta.image": "",
     "service_1.hero.title": "Industrie 4.0",
     "service_1.hero.subtitle": "Entrez dans l'ère de la production intelligente et optimisez vos opérations grâce aux données et à l'intelligence artificielle.",
+    "service_1.hero.cta": "Discuter d'un projet",
     "service_1.details.title": "La nouvelle génération de production.",
     "service_1.details.p1": "Nous appliquons la méthode <strong>Problem First</strong> pour comprendre précisément vos goulots d'étranglement avant d'introduire toute technologie. L'intégration de l'IA n'est pertinente que si elle règle un problème coûteux.",
     "service_1.details.p2": "Que vous cherchiez des \"quick wins\" grâce à une approche hybride ou une intégration clé en main de capteurs IoT, nous connectons votre plancher à vos objectifs financiers.",
@@ -219,6 +219,7 @@ export const translations = {
     "service_2.meta.image": "",
     "service_2.hero.title": "Gestion des opérations",
     "service_2.hero.subtitle": "Passez du mode pompier à une gestion proactive pour maximiser votre rentabilité et l'efficacité de vos équipes.",
+    "service_2.hero.cta": "Discuter d'un projet",
     "service_2.details.title": "La nouvelle génération de management.",
     "service_2.details.p1": "L'inefficacité opérationnelle découle souvent d'un manque de clarté dans les responsabilités. Nous offrons une évaluation approfondie de vos processus actuels.",
     "service_2.details.p2": "Grâce à une réorganisation chirurgicale des rôles et un alignement des compétences basé sur la matrice RACI (jusqu'à 1000 points de contrôle), vos gestionnaires arrêteront d'éteindre des feux pour enfin piloter la croissance.",
@@ -250,6 +251,7 @@ export const translations = {
     "service_3.meta.image": "",
     "service_3.hero.title": "Lean Management",
     "service_3.hero.subtitle": "Éliminez le gaspillage, fluidifiez vos processus et créez une véritable synergie au sein de vos équipes opérationnelles.",
+    "service_3.hero.cta": "Discuter d'un projet",
     "service_3.details.title": "La nouvelle génération de performance.",
     "service_3.details.p1": "Le Lean n'est pas qu'une boîte à outils, c'est une culture de l'amélioration continue. Pour que tout le monde travaille dans le même sens, il faut une équipe unie et disciplinée.",
     "service_3.details.p2": "Nous allons au-delà de la théorie : nous accompagnons vos équipes sur le terrain (gemba) pour instaurer une discipline de fer, développer le courage managérial et ancrer des rituels qui perdurent.",
@@ -281,6 +283,7 @@ export const translations = {
     "service_4.meta.image": "",
     "service_4.hero.title": "Leadership industriel",
     "service_4.hero.subtitle": "Transformez vos superviseurs en véritables leaders opérationnels capables d'engager leurs équipes.",
+    "service_4.hero.cta": "Discuter d'un projet",
     "service_4.details.title": "La nouvelle génération de leaders.",
     "service_4.details.p1": "L'usine de demain ne se pilote pas depuis un bureau. Elle nécessite des leaders présents sur le plancher, capables d'inspirer et de responsabiliser.",
     "service_4.details.p2": "Notre approche pragmatique fournit des outils clés en main (routines de plancher, scripts de gestion de conflits) et un accompagnement sur mesure pour que chaque superviseur prenne pleinement sa place.",
@@ -308,8 +311,6 @@ export const translations = {
     "service_4.cta.subtitle": "Le manque d'encadrement coûte cher en rétention et en efficacité. Équipez vos superviseurs dès aujourd'hui du courage managérial nécessaire pour bâtir une équipe engagée et performante."
   },
   en: {
-    "home.meta.title": "V2R Consulting | Eng",
-    "home.meta.description": "Canada's #1 digital performance agency. Maximize your ROI - Sales funnels | App optimization | Profitable websites | +1 581-502-1115.",
-    "home.meta.image": ""
+
   }
 };
