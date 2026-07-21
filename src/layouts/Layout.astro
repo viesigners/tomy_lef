@@ -174,7 +174,10 @@ const canonicalUrl = new URL(currentPath, baseUrl).href;
 
       if (menuToggleBtn) {
         menuToggleBtn.addEventListener('click', () => {
-          document.body.classList.toggle('menu-open');
+          const isOpen = document.body.classList.toggle('menu-open');
+          if (isOpen && headerWrapper) {
+            headerWrapper.classList.remove('is-hidden');
+          }
         });
       }
 
@@ -253,6 +256,7 @@ const canonicalUrl = new URL(currentPath, baseUrl).href;
       if (headerWrapper) {
         let lastScrollY = window.scrollY;
         window.addEventListener('scroll', () => {
+          if (document.body.classList.contains('menu-open')) return;
           const currentScrollY = window.scrollY;
           headerWrapper.classList.toggle('is-scrolled', currentScrollY > 50);
           headerWrapper.classList.toggle('is-hidden', currentScrollY > lastScrollY && currentScrollY > 150);
