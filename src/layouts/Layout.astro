@@ -89,24 +89,21 @@ const canonicalUrl = new URL(currentPath, baseUrl).href;
           </button>
         </div>
       </header>
-
-      <!-- Fullscreen Menu -->
-      <div class="fullscreen-menu" id="fullscreenMenu">
-        <nav class="fullscreen-nav">
-          <ul>
-            <li><a href={`${BASE_PATH}/${lang}/#about`}>{t('nav.about')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/sites-web/`}>{t('nav.service_1')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/landing-pages/`}>{t('nav.service_2')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/ux-ui/`}>{t('nav.service_3')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/coaching-d-affaires/`}>{t('nav.service_4')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/contact/`}>{t('nav.contact')}</a></li>
-            <!--<li style="margin-top: 3rem;">
-              <a href={`${BASE_PATH}/${altLang}/`} class="lang-btn" style="background:none; border:none; color:var(--text-color); padding:0; cursor:pointer; font-weight:500; font-size:clamp(1.5rem, 3vw, 2rem); font-family:var(--font-heading); text-transform:uppercase; transition:opacity 0.3s; opacity: 0.7; text-decoration: none;">{altLabel}</a>
-            </li>-->
-          </ul>
-        </nav>
-      </div>
     </div>
+  </div>
+
+  <!-- Fullscreen Menu -->
+  <div class="fullscreen-menu" id="fullscreenMenu">
+    <nav class="fullscreen-nav">
+      <ul>
+        <li><a href={`${BASE_PATH}/${lang}/#about`}>{t('nav.about')}</a></li>
+        <li><a href={`${BASE_PATH}/${lang}/sites-web/`}>{t('nav.service_1')}</a></li>
+        <li><a href={`${BASE_PATH}/${lang}/landing-pages/`}>{t('nav.service_2')}</a></li>
+        <li><a href={`${BASE_PATH}/${lang}/ux-ui/`}>{t('nav.service_3')}</a></li>
+        <li><a href={`${BASE_PATH}/${lang}/coaching-d-affaires/`}>{t('nav.service_4')}</a></li>
+        <li><a href={`${BASE_PATH}/${lang}/contact/`}>{t('nav.contact')}</a></li>
+      </ul>
+    </nav>
   </div>
 
   <main>
@@ -183,7 +180,11 @@ const canonicalUrl = new URL(currentPath, baseUrl).href;
 
       if (fullscreenMenu) {
         fullscreenMenu.addEventListener('scroll', () => {
-          fullscreenMenu.classList.toggle('is-scrolled', fullscreenMenu.scrollTop > 20);
+          const isScrolled = fullscreenMenu.scrollTop > 20;
+          fullscreenMenu.classList.toggle('is-scrolled', isScrolled);
+          if (headerWrapper) {
+            headerWrapper.classList.toggle('menu-is-scrolled', isScrolled);
+          }
         });
 
         // Close menu when a link is clicked

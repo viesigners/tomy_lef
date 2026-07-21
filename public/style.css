@@ -162,6 +162,20 @@ h3 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+body.menu-open .header-wrapper {
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
+}
+
+body.menu-open .header-wrapper.menu-is-scrolled {
+  background-color: rgba(7, 11, 18, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .header-wrapper.is-hidden {
   transform: translateY(-100%);
 }
