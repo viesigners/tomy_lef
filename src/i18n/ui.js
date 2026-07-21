@@ -21,6 +21,15 @@ export const translations = {
     "home.banner.paragraph": "Nous aidons les entreprises de services, SaaS et applications mobiles à optimiser leur présence numérique pour deux résultats précis : acquérir plus de clients et maximiser la valeur de chacun — une approche qui met la psychologie humaine au service de votre rentabilité.</strong>",
     "home.banner.cta": "Démarrer un projet",
     "home.banner.cta-incentive": "Seulement 3 places disponibles en {month}.",
+    "home.logo.client_1.alt": "Logo client 1",
+    "home.logo.client_2.alt": "Logo client 2",
+    "home.logo.client_3.alt": "Logo client 3",
+    "home.logo.client_4.alt": "Logo client 4",
+    "home.logo.client_5.alt": "Logo client 5",
+    "home.logo.client_6.alt": "Logo client 6",
+    "home.logo.client_7.alt": "Logo client 7",
+    "home.logo.client_8.alt": "Logo client 8",
+    "home.logo.client_9.alt": "Logo client 9",
 
     "problem.tag": "DÉFIS DE CROISSANCE",
     "problem.title.part1": "Vous avez une ",
@@ -44,6 +53,12 @@ export const translations = {
     "about.desc.p1": "Nous sommes des experts hybrides en expérience utilisateur numérique (UX/UI) et optimisation du taux de conversion et des ventes (CRO) — originaire du Québec, Canada — avec plus de 30 années combinées à aider des entreprises de toutes tailles et de tous secteurs, dans des marchés anglophones comme francophones, à performer en ligne.",
     "about.desc.p2": "Entourés d'un réseau d'experts selects du domaine numérique, aussi humains que compétents, nous opérons comme coach d'affaires, consultants stratégiques et partenaires de réalisation en conception d'offres et d'expériences numériques.",
     "about.seen": "Tel que vu dans",
+    "about.logo.education.alt": "Logo éducation ou certificat",
+    "about.logo.seen_1.alt": "Média 1",
+    "about.logo.seen_2.alt": "Média 2",
+    "about.logo.seen_3.alt": "Média 3",
+    "about.logo.seen_4.alt": "Média 4",
+    "about.logo.seen_5.alt": "Média 5",
 
 
 
@@ -86,11 +101,6 @@ export const translations = {
     "stats.markets.desc": "B2B, B2C, B2B2C, Ecommerce, SaaS, Services locaux ou en ligne, mieux-être, baseball... on a touché à plus de 30 domaines.",
     "stats.reach.title": "Notre portée internationnale",
     "stats.reach.desc": "Des entrepreneurs et entreprises provenant de plus de 6 pays à travers le monde nous ont fait confiance.",
-
-    "portfolio.title": "Quelques réalisations que vous reconnaîtrez peut-être...",
-    "portfolio.subtitle": "Et près de 500 autres entreprises de toutes tailles propulsées sur le web",
-    "portfolio.recognized": "Projets reconnus par",
-    "portfolio.cta": "C'est mon tour",
 
     "qualification.title": "Soyons clairs : nous ne travaillons PAS avec tout le monde",
     "qualification.yes.title": "C'est pour vous si :",

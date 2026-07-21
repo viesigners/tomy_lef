@@ -15,9 +15,10 @@ const t = { ...translations['fr'], ...(translations[lang] || {}) };
 
 const title = t['contact.meta.title'];
 const description = t['contact.meta.description'];
+const image = t['contact.meta.image'];
 ---
 
-<Layout lang={lang} title={title} description={description}>
+<Layout lang={lang} title={title} description={description} image={image}>
 
   <!-- HERO SECTION -->
   <section class="service-hero">

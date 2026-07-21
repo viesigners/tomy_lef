@@ -15,6 +15,7 @@ const t = { ...translations['fr'], ...(translations[lang] || {}) };
 
 const title = t['service_1.meta.title'];
 const description = t['service_1.meta.description'];
+const image = t['service_1.meta.image'];
 
 const faqs = [
   {
@@ -45,7 +46,7 @@ const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" st
 </svg>`;
 ---
 
-<Layout lang={lang} title={title} description={description}>
+<Layout lang={lang} title={title} description={description} image={image}>
 
   <!-- HERO SECTION -->
   <section class="service-hero">
@@ -53,6 +54,9 @@ const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" st
 
       <h1>{t['service_1.hero.title']}</h1>
       <p>{t['service_1.hero.subtitle']}</p>
+      <div class="mt-4">
+        <a href={`${BASE_PATH}/${lang}/contact/`} class="btn btn-primary">{t['service_1.hero.cta']}</a>
+      </div>
     </div>
   </section>
 
