@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { BASE_PATH } from '../../config.js';
-import { translations } from '../../i18n/ui.js';
+import { translations, phoneNumber } from '../../i18n/ui.js';
 
 export function getStaticPaths() {
   return [
@@ -46,8 +46,8 @@ const description = t['contact.meta.description'];
               </svg>
             </div>
             <div>
-              <span class="small text-uppercase text-secondary fw-semibold">{t['contact.info.line1.label']}</span><br/>
-              <strong class="fs-4 text-dark">{t['contact.info.line1.value']}</strong><br/>
+              <span class="small text-uppercase text-secondary fw-semibold">{t['contact.info.label'] || t['contact.info.line1.label']}</span><br/>
+              <a href={`tel:${phoneNumber.replace(/[\s-]/g, '')}`} class="fs-4 text-dark text-decoration-none fw-bold">{t['contact.info.line1.value']}</a><br/>
               <span class="text-secondary small">{t['contact.info.line1.hours']}</span>
             </div>
           </li>

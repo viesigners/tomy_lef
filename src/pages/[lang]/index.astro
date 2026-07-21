@@ -2,7 +2,7 @@
 // src/pages/[lang]/index.astro
 import Layout from '../../layouts/Layout.astro';
 import { BASE_PATH } from '../../config.js';
-import { translations } from '../../i18n/ui.js';
+import { translations, phoneNumber } from '../../i18n/ui.js';
 
 export function getStaticPaths() {
   return [
@@ -15,12 +15,12 @@ const { lang } = Astro.params;
 const t = { ...translations['fr'], ...(translations[lang] || {}) };
 
 const title = lang === 'fr'
-  ? 'V2R Consulting | Fr'
-  : 'V2R Consulting | Eng';
+  ? 'Viesigners | Fr'
+  : 'Viesigners | Eng';
 
 const description = lang === 'fr'
-  ? "L'agence canadienne de performance numérique no 1. Maximisez votre ROI - Tunnels de vente | Optimisation d'apps | Sites rentables | +1 581-502-1115."
-  : "Canada's #1 digital performance agency. Maximize your ROI - Sales funnels | App optimization | Profitable websites | +1 581-502-1115.";
+  ? `L'agence canadienne de performance numérique no 1. Maximisez votre ROI - Tunnels de vente | Optimisation d'apps | Sites rentables | ${phoneNumber}.`
+  : `Canada's #1 digital performance agency. Maximize your ROI - Sales funnels | App optimization | Profitable websites | ${phoneNumber}.`;
 
 // Automatically find all testimonials and distribute them left-to-right across 3 columns
 const testimonialKeys = Object.keys(t)
@@ -239,22 +239,22 @@ const currentMonth = new Date().toLocaleString(lang, { month: 'long' });
       </h2>
 
       <div class="grid-2 services-grid">
-        <a href={`${BASE_PATH}/${lang}/industrie-4-0/`} class="card card-minimal">
+        <a href={`${BASE_PATH}/${lang}/sites-web/`} class="card card-minimal">
           <h3>{t['services.service_1.title']}</h3>
           <p>{t['services.service_1.desc']}</p>
           <div class="card-arrow" set:html={arrowSvg}></div>
         </a>
-        <a href={`${BASE_PATH}/${lang}/gestion-des-operations/`} class="card card-minimal">
+        <a href={`${BASE_PATH}/${lang}/landing-pages/`} class="card card-minimal">
           <h3>{t['services.service_2.title']}</h3>
           <p>{t['services.service_2.desc']}</p>
           <div class="card-arrow" set:html={arrowSvg}></div>
         </a>
-        <a href={`${BASE_PATH}/${lang}/lean-management/`} class="card card-minimal">
+        <a href={`${BASE_PATH}/${lang}/ux-ui/`} class="card card-minimal">
           <h3>{t['services.service_3.title']}</h3>
           <p>{t['services.service_3.desc']}</p>
           <div class="card-arrow" set:html={arrowSvg}></div>
         </a>
-        <a href={`${BASE_PATH}/${lang}/leadership-industriel/`} class="card card-minimal">
+        <a href={`${BASE_PATH}/${lang}/coaching-d-affaires/`} class="card card-minimal">
           <h3>{t['services.service_4.title']}</h3>
           <p>{t['services.service_4.desc']}</p>
           <div class="card-arrow" set:html={arrowSvg}></div>

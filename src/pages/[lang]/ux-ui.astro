@@ -49,9 +49,9 @@ const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" st
 
   <!-- HERO SECTION -->
   <section class="service-hero">
-    <div class="container mt-5">
+    <div class="container">
 
-      <h1>{t['service_3.hero.title']}</h1>
+      <h1 set:html={t['service_3.hero.title']}></h1>
       <p>{t['service_3.hero.subtitle']}</p>
     </div>
   </section>
@@ -63,7 +63,7 @@ const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" st
         <div class="split-content-left">
         <h2 class="display-5 fw-bold mb-4 lh-sm">{t['service_3.details.title']}</h2>
         <p class="fs-5 opacity-75 lh-base mb-4" set:html={t['service_3.details.p1']}></p>
-        <p class="fs-5 opacity-75 lh-base mb-5">{t['service_3.details.p2']}</p>
+        <p class="fs-5 opacity-75 lh-base mb-5" set:html={t['service_3.details.p2']}></p>
 
         <div class="service-quote">
           <p>{t['service_3.quote.text']}</p>
@@ -117,6 +117,15 @@ const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" st
                 <p>{t['service_3.features.4.desc']}</p>
               </div>
             </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <div>
+                <h4>{t['service_3.features.5.title']}</h4>
+                <p>{t['service_3.features.5.desc']}</p>
+              </div>
+            </li>
           </ul>
           </div>
         </div>
@@ -152,9 +161,9 @@ const arrowSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" st
   <!-- CTA SECTION -->
   <section class="service-cta">
     <div class="container">
-      <h2>{t['service_1.cta.title']}</h2>
+      <h2>{t['service_3.cta.title']}</h2>
       <p class="fs-5 opacity-75 mx-auto mb-5 lh-base">{t['service_3.cta.subtitle']}</p>
-      <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-dark">{t['service_1.cta.button']} <span class="btn-arrow" set:html={arrowSvg}></span></a>
+      <a href={`${BASE_PATH}/${lang}/contact/`} class="btn-dark">{t['service_3.cta.button']} <span class="btn-arrow" set:html={arrowSvg}></span></a>
     </div>
   </section>
 

@@ -65,7 +65,7 @@ h1 {
 }
 
 p {
-  color: #ffffff;
+  color: rgb(159, 159, 169);
 }
 
 h2 {
@@ -178,8 +178,6 @@ header.main-header {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   transition: padding 0.3s ease;
-  position: relative;
-  z-index: 1000;
 }
 
 .header-contact {
@@ -349,7 +347,7 @@ section {
   max-width: 700px;
   margin: 0 0 3rem 0;
   opacity: 0.8;
-  color: #ffffff;
+  color: rgb(159, 159, 169);
 }
 
 /* Layout Util */
@@ -497,7 +495,7 @@ section {
 }
 
 .section-light .card-minimal:hover p {
-  color: #ffffff !important;
+  color: rgb(159, 159, 169) !important;
 }
 
 .card-minimal::before {
@@ -1542,22 +1540,12 @@ body.menu-open .hamburger .line-bottom {
 }
 
 .faq-icon {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(62, 73, 89, 0.25);
-  opacity: 0.75;
-  transition: border-color 0.3s ease;
-}
-
-.faq-icon svg {
+  font-size: 1.5rem;
+  font-weight: 300;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.faq-item.is-open .faq-icon svg {
+.faq-item.is-open .faq-icon {
   transform: rotate(45deg);
 }
 
@@ -1579,32 +1567,6 @@ body.menu-open .hamburger .line-bottom {
   margin: 0;
   line-height: 1.6;
 }
-
-/* FAQ on dark background (service pages) */
-#faq:not(.section-light) .faq-question {
-  color: var(--text-color);
-}
-
-#faq:not(.section-light) .faq-question:hover {
-  color: var(--accent-color);
-}
-
-#faq:not(.section-light) .faq-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-#faq:not(.section-light) .faq-list {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-#faq:not(.section-light) .faq-answer p {
-  color: var(--text-color);
-}
-
-#faq:not(.section-light) .faq-icon {
-  border-color: rgba(255, 255, 255, 0.25);
-}
-
 
 /* Forms */
 .contact-form {
@@ -1689,7 +1651,7 @@ textarea.form-control {
 /* Base */
 body {
   background-color: var(--bg-color) !important;
-  color: var(--text-color) !important;
+  color: var(--text-muted) !important;
   font-family: var(--font-body) !important;
   line-height: 1.7 !important;
 }
@@ -2035,9 +1997,6 @@ a.btn.btn-primary[style*="#e63946"],
 .letter-spacing-2 { letter-spacing: 2px; }
 .fs-sm { font-size: 0.8rem; }
 .pt-5rem { padding-top: 5rem !important; }
-.pb-5rem { padding-bottom: 5rem !important; }
-.mt-n1 { margin-top: -0.25rem !important; }
-.text-accent { color: var(--accent-color) !important; }
 .fs-lg-icon { font-size: 1.6rem; margin-top: -0.2rem; color: #e63946 !important; }
 .pt-custom-4 { padding-top: 4rem; }
 .h-400 { height: 400px; }

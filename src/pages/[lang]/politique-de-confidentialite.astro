@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { translations } from '../../i18n/ui.js';
+import { privacyPolicyContent } from '../../i18n/ui.js';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'fr' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const t = { ...translations['fr'], ...(translations[lang] || {}) };
+
+const title = t['privacy.meta.title'];
+const description = t['privacy.meta.description'];
+const content = privacyPolicyContent[lang] || privacyPolicyContent['fr'];
+---
+
+<Layout lang={lang} title={title} description={description}>
+
+  <!-- BANNER -->
+  <section class="service-hero">
+    <div class="container text-center">
+      <h1>{t['privacy.title']}</h1>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="section-light py-5">
+    <div class="container py-5">
+      <div class="mx-auto" style="max-width: 760px;" set:html={content} />
+    </div>
+  </section>
+
+</Layout>

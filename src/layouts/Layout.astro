@@ -1,6 +1,8 @@
 ---
 import { BASE_PATH } from '../config.js';
 import { useTranslations } from '../i18n/utils.js';
+import { phoneNumber, facebookUrl, linkedinUrl } from '../i18n/ui.js';
+import '../../style.css';
 // src/layouts/Layout.astro
 // Props: lang (string), title (string), description (string)
 const { lang = 'fr', title, description } = Astro.props;
@@ -32,14 +34,16 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
     <div class="container-fluid px-4 px-md-5">
       <header class="main-header">
         <div class="header-contact position-relative z-3">
-          <a href="tel:+12345678901" class="contact-link">
+          <a href={`tel:${phoneNumber.replace(/[\s-]/g, '')}`} class="contact-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
             </svg>
-            <span class="phone-number">+1 234-567-8901</span>
+            <span class="phone-number">{phoneNumber}</span>
           </a>
         </div>
-        <a href={`${BASE_PATH}/${lang}/`} class="logo position-relative z-3">V2R Consulting</a>
+        <a href={`${BASE_PATH}/${lang}/`} class="logo position-relative z-3">
+          <img src={`${BASE_PATH}/images/viesigners-logo-white.png`} alt="Viesigners Logo" style="height: 40px; width: auto;" />
+        </a>
         <div class="header-menu-toggle position-relative z-3 d-flex align-items-center justify-content-end">
           <button class="menu-btn" id="menuToggleBtn">
             <div class="menu-text-container">
@@ -60,10 +64,10 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
         <nav class="fullscreen-nav">
           <ul>
             <li><a href={`${BASE_PATH}/${lang}/#about`}>{t('nav.about')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/industrie-4-0/`}>{t('nav.service_1')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/gestion-des-operations/`}>{t('nav.service_2')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/lean-management/`}>{t('nav.service_3')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/leadership-industriel/`}>{t('nav.service_4')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/sites-web/`}>{t('nav.service_1')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/landing-pages/`}>{t('nav.service_2')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/ux-ui/`}>{t('nav.service_3')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/coaching-d-affaires/`}>{t('nav.service_4')}</a></li>
             <li><a href={`${BASE_PATH}/${lang}/contact/`}>{t('nav.contact')}</a></li>
             <!--<li style="margin-top: 3rem;">
               <a href={`${BASE_PATH}/${altLang}/`} class="lang-btn" style="background:none; border:none; color:var(--text-color); padding:0; cursor:pointer; font-weight:500; font-size:clamp(1.5rem, 3vw, 2rem); font-family:var(--font-heading); text-transform:uppercase; transition:opacity 0.3s; opacity: 0.7; text-decoration: none;">{altLabel}</a>
@@ -83,18 +87,20 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href={`${BASE_PATH}/${lang}/`} class="logo">V2R Consulting</a>
+          <a href={`${BASE_PATH}/${lang}/`} class="logo">
+            <img src={`${BASE_PATH}/images/viesigners-logo-white.png`} alt="Viesigners Logo" style="height: 40px; width: auto;" />
+          </a>
           <p class="footer-tagline">{t('footer.tagline')}</p>
           <div class="footer-info">
             <p>{t('footer.location.1')}</p>
             <p>{t('footer.location.2')}</p>
-            <p>{t('footer.phone')}</p>
+            <p><a href={`tel:${phoneNumber.replace(/[\s-]/g, '')}`} class="text-reset text-decoration-none">{t('footer.phone')}</a></p>
           </div>
           <div class="footer-socials">
-            <a href="#" class="social-icon">
+            <a href={facebookUrl} class="social-icon" aria-label="Facebook">
               <svg viewBox="0 0 24 24"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
             </a>
-            <a href="#" class="social-icon">
+            <a href={linkedinUrl} class="social-icon" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
             </a>
           </div>
@@ -103,10 +109,10 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
         <div class="footer-nav">
           <h4>{t('footer.services')}</h4>
           <ul>
-            <li><a href={`${BASE_PATH}/${lang}/industrie-4-0/`}>{t('services.service_1.title')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/gestion-des-operations/`}>{t('services.service_2.title')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/lean-management/`}>{t('services.service_3.title')}</a></li>
-            <li><a href={`${BASE_PATH}/${lang}/leadership-industriel/`}>{t('services.service_4.title')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/sites-web/`}>{t('nav.service_1')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/landing-pages/`}>{t('nav.service_2')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/ux-ui/`}>{t('nav.service_3')}</a></li>
+            <li><a href={`${BASE_PATH}/${lang}/coaching-d-affaires/`}>{t('nav.service_4')}</a></li>
           </ul>
         </div>
 
@@ -117,10 +123,10 @@ const altLabel = lang === 'fr' ? 'EN' : 'FR';
       </div>
 
       <div class="footer-bottom">
-        <p>Copyright &copy; 2026, Les V2R Consulting. <span>{t('footer.rights')}</span></p>
+        <p>Copyright &copy; 2026, Les Viesigners. <span>{t('footer.rights')}</span></p>
         <div class="footer-legal">
-          <a href="#">{t('footer.privacy')}</a>
-          <a href="#">{t('footer.terms')}</a>
+          <a href={`${BASE_PATH}/${lang}/politique-de-confidentialite/`}>{t('footer.privacy')}</a>
+          <a href={`${BASE_PATH}/${lang}/conditions-generales/`}>{t('footer.terms')}</a>
         </div>
       </div>
     </div>
