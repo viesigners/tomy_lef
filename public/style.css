@@ -331,7 +331,7 @@ section {
 .hero {
   padding: 15rem 0 2rem;
   text-align: left;
-  background-image: linear-gradient(180deg, rgba(11, 17, 32, 0.4) 0%, var(--bg-color) 100%), url('images/home-hero-banner-bg.png');
+  background-image: linear-gradient(180deg, rgba(11, 17, 32, 0.4) 0%, var(--bg-color) 100%), url('/images/home-hero-banner-bg.png');
   background-size: cover;
   background-position: left center;
   background-repeat: no-repeat;
@@ -2036,7 +2036,7 @@ a.btn.btn-primary[style*="#e63946"],
 .cta-section {
   position: relative;
   padding: 12rem 0 10rem;
-  background-image: linear-gradient(to right, var(--bg-color) 25%, rgba(4, 20, 29, 0.35)), url('images/suit.png');
+  background-image: linear-gradient(to right, var(--bg-color) 25%, rgba(4, 20, 29, 0.35)), url('/images/suit.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
